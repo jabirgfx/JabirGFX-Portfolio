@@ -490,13 +490,21 @@ select {
    EXPERIENCE CARD
 ========================================================= */
 
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
 .experience-card {
     position: absolute;
     right: 5%;
     top: 170px;
 
     width: 120px;
+    height: 200px;
+
     padding: 20px 15px;
+
+    box-sizing: border-box;
 
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 15px;
@@ -513,25 +521,48 @@ select {
     z-index: 30;
 }
 
+
+/* =========================================================
+   3+ NUMBER
+========================================================= */
+
 .experience-card strong {
     display: block;
+
     font-size: 40px;
     line-height: 1;
-    margin-bottom: 18px;
+    font-weight: 800;
+
+    margin: 0 0 12px 0;
 }
+
+
+/* =========================================================
+   YEARS / EXPERIENCE
+========================================================= */
 
 .experience-card span {
     display: block;
+
     font-size: 18px;
     line-height: 1.5;
+
     color: #d6dff0;
+
+    margin: 0;
 }
+
+
+/* =========================================================
+   EXPERIENCE ICON
+========================================================= */
 
 .experience-card i,
 .experience-card .icon {
     position: absolute;
-    bottom: 10px;
+
     right: 12px;
+    bottom: 10px;
 
     width: 38px;
     height: 38px;
@@ -545,20 +576,28 @@ select {
     font-size: 24px;
     color: #fff;
     font-style: normal;
-    z-index: 2;
+
+    z-index: 5;
 }
 
-.experience-icon {
+
+/* =========================================================
+   EXPERIENCE IMAGE ICON
+========================================================= */
+
+.experience-card .experience-icon {
     position: absolute;
-    right: 70px;
+
+    right: 65px;
     bottom: 20px;
 
     width: 40px;
     height: 40px;
 
     object-fit: contain;
-}
 
+    z-index: 5;
+}
 
 /* =========================================================
    SCROLL NOTE
@@ -3033,4 +3072,212 @@ body.cursor-hover .cursor-ring {
 footer {
     border-top: 1px solid #12273d !important;
     border-bottom: 1px solid #12273d !important;
+}
+/* =========================================================
+   FINAL CLIENTS CARD FIX
+   Keeps the Happy Clients card aligned with Projects Card
+========================================================= */
+
+.clients-card {
+    position: relative;
+    min-height: 205px;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 20px 28px 24px;
+
+    border: 1px solid rgba(30, 177, 255, 0.38);
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 20, 35, 0.93),
+            rgba(2, 11, 21, 0.78)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.clients-card::before {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 110px;
+
+    right: -70px;
+    bottom: -65px;
+
+    border-radius: 50%;
+
+    background: rgba(70, 55, 255, 0.13);
+    filter: blur(42px);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.35s ease;
+}
+
+.clients-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(30, 177, 255, 0.72);
+    box-shadow:
+        0 20px 65px rgba(0, 120, 255, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.clients-card:hover::before {
+    opacity: 1;
+}
+
+/* People icon */
+.clients-card .people-icon {
+    position: relative;
+    z-index: 2;
+
+    flex: 0 0 48px;
+
+    width: 54px;
+    height: 48px;
+
+    margin: 0 0 17px 0;
+
+    color: #9271ff;
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(121, 82, 255, 0.12)
+        );
+}
+
+/* Number */
+.clients-card .number {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 44px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4f7ff 0%,
+            #17baff 72%,
+            #7659ff 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Happy Clients */
+.clients-card .label {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0 0;
+
+    color: #d1dbea;
+
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Description */
+.clients-card .description {
+    position: relative;
+    z-index: 2;
+
+    max-width: 100%;
+
+    margin: 7px 0 0;
+
+    color: #8f9db1;
+
+    font-size: 11.5px;
+    line-height: 1.45;
+}
+
+/* Arrow */
+.clients-card .card-arrow {
+    position: absolute;
+    z-index: 10;
+
+    top: 17px;
+    right: 17px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(79, 159, 237, 0.55);
+    border-radius: 50%;
+
+    color: #cceaff;
+    font-size: 18px;
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.clients-card:hover .card-arrow {
+    transform: rotate(45deg);
+    background: rgba(24, 150, 255, 0.11);
+}
+
+/* =========================================================
+   CLIENTS CARD RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+    .clients-card {
+        min-height: 205px;
+    }
+}
+
+@media (max-width: 720px) {
+    .clients-card {
+        min-height: 200px;
+        height: auto;
+        padding: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-card {
+        min-height: 200px;
+        padding: 28px;
+    }
+
+    .clients-card .number {
+        font-size: 42px;
+    }
+
+    .clients-card .description {
+        font-size: 11px;
+    }
 }
