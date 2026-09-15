@@ -1080,13 +1080,11 @@ h1 span {
     letter-spacing: -0.05em;
 
     background:
-        linear-gradient(
-            90deg,
-            #f4f7ff 0%,
-            #17baff 72%,
-            #7659ff 100%
-        );
-
+    linear-gradient(
+        90deg,
+        #9a4cff 0%,
+        #25b8ff 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
 
@@ -1194,76 +1192,56 @@ h1 span {
    PROJECT ICON
 ========================= */
 
+/* =========================
+   PROJECT ICON — PNG
+========================= */
+
 .project-icon {
     position: relative;
-
     z-index: 2;
 
-    flex: 0 0 56px;
+    flex: 0 0 70px;
 
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
 
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    grid-template-columns:
-        1fr 1fr;
+    padding: 0;
 
-    gap: 4px;
+    border: none;
+    border-radius: 0;
 
-    padding: 7px;
+    background: transparent;
 
-    border:
-        1px solid
-        rgba(82, 150, 236, 0.28);
-
-    border-radius: 11px;
-
-    background:
-        rgba(20, 55, 90, 0.28);
+    box-sizing: border-box;
 }
 
-.project-icon i {
-    border-radius: 4px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0da6e5,
-            #5752dd
-        );
-
-    box-shadow:
-        0 0 12px
-        rgba(34, 152, 255, 0.1);
-}
-
-.project-icon i:nth-child(2) {
-    opacity: 0.35;
-}
-
-.project-icon i:nth-child(3) {
-    opacity: 0.52;
-}
-
-.project-icon i:nth-child(4) {
-    opacity: 0.9;
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 
 /* =========================
-   PEOPLE ICON
+   PEOPLE ICON — PNG
 ========================= */
 
 .people-icon {
     position: relative;
 
-    width: 54px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
 
-    margin-bottom: 19px;
+    margin-bottom: 15px;
 
-    color: #9271ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     filter:
         drop-shadow(
@@ -1272,44 +1250,71 @@ h1 span {
         );
 }
 
-.people-icon .head {
-    position: absolute;
+.people-icon img {
+    width: 100%;
+    height: 100%;
 
-    width: 13px;
-    height: 13px;
-
-    left: 10px;
-    top: 3px;
-
-    border:
-        3px solid currentColor;
-
-    border-radius: 50%;
+    object-fit: contain;
+    display: block;
 }
 
-.people-icon .head.second {
-    left: 30px;
-    top: 3px;
+
+/* =========================
+   CALENDAR ICON — PNG
+========================= */
+
+.calendar-icon {
+    flex: 0 0 60px;
+
+    width: 60px;
+    height: 60px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0;
 }
 
-.people-icon .body {
-    position: absolute;
+.calendar-icon img {
+    width: 100%;
+    height: 100%;
 
-    width: 23px;
-    height: 16px;
-
-    left: 2px;
-    bottom: 5px;
-
-    border:
-        3px solid currentColor;
-
-    border-radius:
-        13px 13px 5px 5px;
+    object-fit: contain;
+    display: block;
 }
 
-.people-icon .body.second {
-    left: 26px;
+
+/* =========================
+   TROPHY ICON — PNG
+========================= */
+
+.trophy-icon {
+    flex: 0 0 60px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    filter:
+        drop-shadow(
+            0 0 9px
+            rgba(110, 80, 255, 0.12)
+        );
+}
+
+.trophy-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
 }
 
 
@@ -1378,107 +1383,6 @@ h1 span {
             transparent
         );
 }
-
-
-/* =========================
-   CALENDAR ICON
-========================= */
-
-.calendar-icon {
-    flex: 0 0 50px;
-
-    width: 50px;
-    height: 50px;
-
-    position: relative;
-
-    border:
-        3px solid #986fff;
-
-    border-radius: 9px;
-
-    margin-top: 2px;
-
-    box-shadow:
-        0 0 15px
-        rgba(110, 84, 255, 0.12);
-}
-
-.calendar-icon::before {
-    content: "";
-
-    position: absolute;
-
-    left: -3px;
-    top: 9px;
-
-    width: calc(100% + 6px);
-    height: 3px;
-
-    background: #986fff;
-}
-
-.calendar-icon span {
-    position: absolute;
-
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background: #986fff;
-}
-
-.calendar-icon span:nth-child(1) {
-    left: 8px;
-    top: 20px;
-}
-
-.calendar-icon span:nth-child(2) {
-    left: 22px;
-    top: 20px;
-}
-
-.calendar-icon span:nth-child(3) {
-    left: 35px;
-    top: 20px;
-}
-
-.calendar-icon span:nth-child(4) {
-    left: 8px;
-    top: 33px;
-}
-
-
-/* =========================
-   TROPHY
-========================= */
-
-.trophy-icon {
-    flex: 0 0 50px;
-
-    width: 50px;
-    height: 50px;
-
-    display: grid;
-
-    place-items: center;
-
-    color: #9270ff;
-
-    font-size: 36px;
-
-    line-height: 1;
-
-    transform: rotate(180deg);
-
-    filter:
-        drop-shadow(
-            0 0 9px
-            rgba(110, 80, 255, 0.12)
-        );
-}
-
 
 /* =========================
    WATERMARK
@@ -3177,12 +3081,11 @@ footer {
     letter-spacing: -0.05em;
 
     background:
-        linear-gradient(
-            90deg,
-            #f4f7ff 0%,
-            #17baff 72%,
-            #7659ff 100%
-        );
+    linear-gradient(
+        90deg,
+        #9a4cff 0%,
+        #25b8ff 100%
+    );
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -3280,4 +3183,524 @@ footer {
     .clients-card .description {
         font-size: 11px;
     }
+}
+/* =========================================================
+   JABIRGFX — FINAL MOBILE RESPONSIVE OVERRIDES
+   Keeps desktop design unchanged.
+========================================================= */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, svg, video, canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .page-shell {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .site-header {
+        width: calc(100% - 24px) !important;
+        max-width: none;
+        height: 68px !important;
+        top: 8px !important;
+        padding: 0 16px !important;
+        border-radius: 18px !important;
+        gap: 0 !important;
+        z-index: 1000;
+    }
+
+    .brand img {
+        width: 135px !important;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        margin-left: auto !important;
+        padding: 0;
+        border: 1px solid rgba(91,113,150,.35);
+        border-radius: 12px;
+        background: rgba(7,17,30,.65);
+        color: #f5f7ff;
+        cursor: pointer;
+    }
+
+    .nav {
+        top: 78px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 18px !important;
+        gap: 0 !important;
+        border-radius: 18px !important;
+    }
+
+    .nav a {
+        display: flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 11px 4px !important;
+        font-size: 14px;
+    }
+
+    .nav .nav-underline {
+        display: none;
+    }
+
+    .talk-btn {
+        display: none !important;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 760px !important;
+        height: auto !important;
+        padding: 105px 20px 70px !important;
+    }
+
+    .hero .hero-copy,
+    .hero .hero-content {
+        width: 100% !important;
+        max-width: 620px !important;
+        padding-top: 28px !important;
+    }
+
+    .hero h1 {
+        max-width: 520px;
+        font-size: clamp(36px, 8vw, 48px) !important;
+        line-height: 1.08 !important;
+    }
+
+    .lead {
+        max-width: 540px;
+        font-size: 15px !important;
+        line-height: 1.65;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        min-height: 48px;
+        box-sizing: border-box;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+    }
+
+    .hero .experience-card {
+        top: auto !important;
+        right: 20px !important;
+        bottom: 92px !important;
+        width: 105px !important;
+        height: 175px !important;
+        padding: 16px 13px !important;
+    }
+
+    .hero .experience-card strong {
+        font-size: 32px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .hero .experience-card span {
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+    }
+
+    .hero .experience-card .experience-icon,
+    .hero .experience-card i,
+    .hero .experience-card .icon {
+        right: 10px;
+        bottom: 10px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero .scroll-note {
+        bottom: 24px !important;
+        font-size: 11px;
+    }
+
+    .hero .hero-image img {
+        object-position: 62% center !important;
+    }
+
+    /* ABOUT */
+    .about-section {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 65px 20px !important;
+    }
+
+    .about-container {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+        gap: 38px !important;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-section h1 {
+        max-width: 100%;
+        font-size: clamp(38px, 9vw, 54px) !important;
+        line-height: 1.04;
+    }
+
+    .bio {
+        max-width: 100% !important;
+        font-size: 14px !important;
+        line-height: 1.65;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .projects-card,
+    .clients-card {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .wide-card {
+        grid-column: 1 / -1;
+    }
+
+    /* PROJECTS */
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .project img {
+        height: 170px;
+    }
+
+    .project div {
+        padding: 13px 14px 16px;
+    }
+
+    /* SERVICES + PROCESS */
+    .service-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .service,
+    .process-grid > div {
+        min-width: 0;
+        padding: 20px;
+    }
+
+    /* CTA */
+    .cta {
+        margin: 0 20px 30px !important;
+        min-height: 0 !important;
+        padding: 35px 25px !important;
+        gap: 25px;
+        box-sizing: border-box;
+    }
+
+    .cta h2 {
+        font-size: clamp(28px, 7vw, 38px) !important;
+        line-height: 1.1;
+    }
+
+    .cta-mark {
+        width: 190px !important;
+        height: 140px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 28px 20px !important;
+        min-height: 0 !important;
+        gap: 18px;
+    }
+
+    .footer-links {
+        gap: 18px !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        width: calc(100% - 20px) !important;
+        height: 64px !important;
+        padding: 0 13px !important;
+    }
+
+    .brand img {
+        width: 122px !important;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav {
+        top: 73px !important;
+    }
+
+    .hero {
+        min-height: 720px !important;
+        padding: 100px 18px 60px !important;
+    }
+
+    .hero .hero-copy,
+    .hero .hero-content {
+        padding-top: 20px !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 42px) !important;
+    }
+
+    .lead {
+        font-size: 14px !important;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .experience-card {
+        right: 18px !important;
+        bottom: 82px !important;
+        width: 94px !important;
+        height: 158px !important;
+        padding: 13px 11px !important;
+    }
+
+    .hero .experience-card strong {
+        font-size: 28px !important;
+    }
+
+    .hero .experience-card span {
+        font-size: 14px !important;
+    }
+
+    .hero .hero-image img {
+        object-position: 60% center !important;
+    }
+
+    .section {
+        padding: 52px 18px;
+    }
+
+    .about-section {
+        padding: 55px 18px !important;
+    }
+
+    .stats-grid,
+    .project-grid,
+    .service-grid,
+    .process-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .projects-card,
+    .clients-card,
+    .wide-card {
+        min-height: 190px;
+    }
+
+    .wide-card {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 22px;
+        padding: 24px !important;
+    }
+
+    .vertical-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .project img {
+        height: 200px;
+    }
+
+    .service,
+    .process-grid > div {
+        min-height: 180px;
+    }
+
+    .cta {
+        margin: 0 18px 25px !important;
+        padding: 30px 21px !important;
+    }
+
+    .cta-mark {
+        width: 150px !important;
+        height: 115px !important;
+    }
+
+    .footer .brand img {
+        width: 135px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 30px !important;
+    }
+
+    .hero .experience-card {
+        right: 14px !important;
+        width: 88px !important;
+        height: 148px !important;
+    }
+
+    .hero .experience-card strong {
+        font-size: 25px !important;
+    }
+
+    .hero .experience-card span {
+        font-size: 13px !important;
+    }
+
+    .section,
+    .about-section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .cta {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .footer-links {
+        gap: 14px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .project:hover,
+    .stat-card:hover,
+    .clients-card:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================================
+   MOBILE HERO IMAGE — NO CROP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero .hero-visual .hero-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .hero .hero-visual .hero-image img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+
+        display: block !important;
+
+        /* পুরো ছবিটা দেখাবে, crop করবে না */
+        object-fit: contain !important;
+
+        /* ছবিটা ডানদিকে থাকবে */
+        object-position: right center !important;
+    }
+
+    /* Image-এর পিছনের empty area dark থাকবে */
+    .hero .hero-visual .hero-image {
+        background: #030712 !important;
+    }
+
+    /* Text readable রাখার জন্য overlay */
+    .hero .hero-visual .hero-image::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        pointer-events: none !important;
+
+        background: linear-gradient(
+            90deg,
+            rgba(3, 7, 18, 0.96) 0%,
+            rgba(3, 7, 18, 0.78) 35%,
+            rgba(3, 7, 18, 0.30) 65%,
+            rgba(3, 7, 18, 0.10) 100%
+        ) !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+    .hero .hero-visual .hero-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain !important;
+
+        /* ছোট screen-এ ছবিটা একটু ডানদিকে */
+        object-position: 70% center !important;
+    }
+
 }
